@@ -1,0 +1,6 @@
+.cow/
+.venv/
+__pycache__/
+*.egg-info/
+dist/
+build/

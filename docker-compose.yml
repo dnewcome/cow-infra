@@ -1,0 +1,16 @@
+services:
+  localstack:
+    image: localstack/localstack:3
+    container_name: cow-infra-localstack
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: s3,dynamodb
+      DEBUG: "0"
+      PERSISTENCE: "1"
+      AWS_DEFAULT_REGION: us-east-1
+    volumes:
+      - localstack-data:/var/lib/localstack
+
+volumes:
+  localstack-data:
